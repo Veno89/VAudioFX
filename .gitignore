@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.tsbuildinfo
+playwright-report/
+test-results/
+.asset-downloads/
+.qa/
+.qa-downloads/
+*.log
+artifacts/

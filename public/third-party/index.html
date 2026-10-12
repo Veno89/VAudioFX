@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VAudioFX audio software notices</title></head>
+<body><main><h1>Audio software notices and source</h1>
+<p>VAudioFX uses the following unmodified libraries locally. No audio is uploaded. Their licenses apply to the software, not to audio you create with it.</p>
+<ul>
+<li><strong>SoundTouchJS core and Lanczos interpolation 2.1.1</strong>, Steve “Cutter” Blades and contributors. <a href="SoundTouch-MPL-2.0.txt">Mozilla Public License 2.0</a>. <a href="soundtouch-2.1.1-source.tar.gz">Corresponding source and build configuration</a>. <a href="https://github.com/cutterbl/SoundTouchJS/tree/d9e39a7ddcf74c7a145bbba45856f30068c82b79">Upstream revision d9e39a7</a>.</li>
+<li><strong>wasm-media-encoders 0.7.0</strong>, Copyright (c) 2020–2024 arseneyr. <a href="wasm-media-encoders-MIT.txt">MIT license</a>. <a href="encoder-0.7.0.tar.gz">JavaScript/C wrappers and build scripts</a>. <a href="https://github.com/arseneyr/wasm-media-encoders/tree/4a45333baadbab312d1cc0911151dfad23157c51">Upstream revision 4a45333</a>.</li>
+<li><strong>LAME MP3 encoder</strong>, the LAME project. <a href="LAME-LGPL.txt">GNU Library General Public License version 2</a>. <a href="lame-source.tar.gz">Corresponding source, revision 98db548</a>. See its source headers for contributor copyright notices.</li>
+<li><strong>libogg</strong>, Xiph.Org Foundation. <a href="Ogg-BSD.txt">BSD license and copyright</a>. <a href="ogg-source.tar.gz">Source revision bada457</a>.</li>
+<li><strong>libvorbis</strong>, Xiph.Org Foundation. <a href="Vorbis-BSD.txt">BSD license and copyright</a>. <a href="vorbis-source.tar.gz">Source revision 0657aee</a>.</li>
+</ul>
+<h2>Rebuilding or replacing a library</h2>
+<p>The pinned source archives contain the unmodified library code and configuration. Encoder wrappers use Emscripten; the included Makefile and README describe the build. Extract LAME under src/wasm/lame/lame-src, libogg under src/wasm/vorbis/ogg-src, and libvorbis under src/wasm/vorbis/vorbis-src in the wrapper project before building. SoundTouchJS uses the included pnpm/Nx configuration. Audio test media and unrelated demos are omitted; library source and build files are retained.</p>
+<p>The encoder WASM files are separate app assets. You may replace or relink them with compatible modified builds, or rebuild VAudioFX using modified library packages. JavaScript and WASM wrapper versions must agree. The original packages are pinned in VAudioFX's package-lock.json. No library source was modified for this integration.</p>
+<p><a href="manifest.json">Source, license and binary integrity manifest</a> · <a href="/">Return to VAudioFX</a></p>
+</main></body></html>

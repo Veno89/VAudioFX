@@ -1,0 +1,6 @@
+# Keep owned text consistent across Windows and Unix checkouts.
+* text=auto eol=lf
+
+# Preserve bundled assets and original third-party notices byte for byte.
+public/** -text
+src/features/sample-manifest.json -text
